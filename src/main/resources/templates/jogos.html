@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC</title>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            text-align: center
+        }
+    </style>
+</head>
+<body class="teste">
+<h1>Lista de Jogos</h1>
+<hr>
+
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Horas Jogadas</th>
+        <th>Dispositivo</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="jogos:${jogos}">
+        <td th:text="${jogos.nome}"></td>
+        <td th:text="${jogos.preco}"></td>
+        <td th:text="${jogos.horas}"></td>
+        <td th:text="${jogos.dispositivo}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
